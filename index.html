@@ -44,92 +44,30 @@
 
         .job-meta { font-size: 0.85em; font-weight: normal; color: inherit; }
 
+        /* Contenedor principal del panel */
         .panel {
-            padding: 0 20px;
-            background-color: white;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            transition: max-height 0.4s ease-in-out;
+        }
+
+        /* Clase que se activa con Javascript para mostrar el contenido */
+        .panel.show {
+            max-height: 1500px; /* Altura máxima holgada para que quepa todo */
+        }
+
+        /* Diseño interno del panel para que los márgenes no rompan la animación */
+        .panel-content {
+            padding: 15px 20px;
+            background-color: white;
             border-left: 2px solid #2c3e50;
             margin-left: 10px;
             margin-bottom: 15px;
         }
 
-        .panel ul { padding: 15px 0 15px 20px; }
+        .panel ul { padding-left: 20px; }
         .panel li { margin-bottom: 8px; }
-        .text-block { padding: 0 0 15px 20px; color: #555; }
+        .text-block { padding-top: 10px; color: #555; }
 
         .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px; }
         .skills-category { background: #f9f9f9; padding: 20px; border-radius: 5px; border-left: 3px solid #2980b9; }
-        .skills-category strong { display: block; margin-bottom: 10px; color: #2c3e50; font-size: 1.1em; }
-        .skills-category ul { padding-left: 15px; }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <header>
-        <h1>JESUS S. DELGADO-QUIJANO</h1>
-        <h2>IT SPECIALIST</h2>
-        <div class="contact">
-            Madrid, Torrejón de Ardoz | 614 354 710 | delgadosteeven@outlook.com<br>
-            linkedin.com/in/steeven-delgado-quijano-3778b71b9
-        </div>
-    </header>
-
-    <div class="profile">
-        <h3 class="section-title">PROFILE</h3>
-        <p>Detail-oriented IT Specialist with extensive experience in technical support, network administration, and system maintenance. Proficient in database management (SQL, Oracle) and troubleshooting complex IT architectures. Adept at driving operational continuity, strengthening cybersecurity, and optimizing workflows through automation (VB.NET, PowerShell). Recognized for strong problem-solving abilities and a practical, user-focused approach to technical training and documentation.</p>
-    </div>
-
-    <h3 class="section-title">EXPERIENCE</h3>
-    
-    <button class="accordion">
-        <span>IT SPECIALIST | ARVATO</span>
-        <span class="job-meta">Oct 2025-Present | Alcalá De Henares</span>
-    </button>
-    <div class="panel">
-        <ul>
-            <li>Diagnosed and resolved hardware and software issues for warehouse IT equipment, minimizing downtime for internal clients.</li>
-            <li>Managed the IT asset lifecycle, including procurement, deployment, and follow-up of technical inquiries to ensure optimal resource allocation.</li>
-            <li>Administered and configured Microsoft 365 and Dynamics environments.</li>
-        </ul>
-        <div class="text-block"><em>Demonstrated consistent technical reliability and adaptability, successfully progressing from temporary roles to securing a permanent contract.</em></div>
-    </div>
-
-    <button class="accordion">
-        <span>WEB DEVELOPER | SERVIDET SOLUCIONES AVANZADAS S.L</span>
-        <span class="job-meta">Jan 2026-Apr 2026 | Madrid</span>
-    </button>
-    <div class="panel">
-        <ul>
-            <li>Administered SQL Server: managed querying and exploitation of relational databases for the retrieval and processing of technical and operational information.</li>
-            <li>Engineered and maintained internal applications using VB.NET, driving process automation and supporting core business operations.</li>
-            <li>Integrated and exchanged data between systems using JSON, facilitating communication between applications and structured information processing.</li>
-        </ul>
-    </div>
-
-    <button class="accordion">
-        <span>IT SPECIALIST | FORVIA</span>
-        <span class="job-meta">Oct 2024-Oct 2025 | Rivas-Vaciamadrid</span>
-    </button>
-    <div class="panel">
-        <ul>
-            <li>Provided technical support, resolving hardware, software, and network incidents through efficient ticket management.</li>
-            <li>Configured and managed LAN/WAN networks, ensuring connectivity and troubleshooting issues.</li>
-            <li>Installed, configured, and updated operating systems, software applications, servers, and workstations.</li>
-            <li>Implemented and maintained cybersecurity measures, monitoring systems and responding to potential threats.</li>
-            <li>Managed IT inventory, ensuring proper availability and functionality of hardware and software resources.</li>
-            <li>Designed and implemented dynamic KPI dashboards in Power BI via data modeling, providing actionable insights for management.</li>
-            <li>Worked as IT Specialist in an industrial production plant, supporting manufacturing systems and automation.</li>
-        </ul>
-    </div>
-
-    <button class="accordion">
-        <span>SOFTWARE TECHNICIAN | SISTEPLANT</span>
-        <span class="job-meta">Aug 2024-Oct 2024 | Madrid Center</span>
-    </button>
-    <div class="panel">
-        <ul>
-            <li>Identified and resolved IT incidents and handled inquiries, primarily through remote support.</li>
-            <li>Provided support for Sisteplant software, backups, networks, and IT architectures.
