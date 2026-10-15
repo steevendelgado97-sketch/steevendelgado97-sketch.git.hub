@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesús S. Delgado-Quijano | IT Specialist</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --bg: #f8f9fa;
+            --text: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        /* Animación de entrada inicial */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 { color: var(--primary); margin-bottom: 5px; font-size: 2.5em; }
+        .subtitle { color: var(--secondary); font-size: 1.2em; font-weight: bold; margin-bottom: 15px; }
+        .contact { font-size: 0.9em; color: #666; }
+
+        /* Estilos de los botones desplegables (Acordeón) */
+        .accordion {
+            background-color: white;
+            color: var(--primary);
+            cursor: pointer;
+            padding: 18px 20px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion:hover, .active {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .accordion::after {
+            content: '\002B'; /* Símbolo de suma */
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+        }
+
+        .active::after {
+            content: '\2212'; /* Símbolo de resta */
+            transform: rotate(180deg);
+        }
+
+        /* Paneles ocultos con animación suave */
+        .panel {
+            padding: 0 20px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .panel-content { padding: 20px 0; }
+        
+        .job-title { font-weight: bold; color: var(--primary); font-size: 1.1em; }
+        .job-date { color: var(--secondary); font-size: 0.9em; margin-bottom: 10px; font-style: italic; }
+        ul { padding-left: 20px; margin-top: 5px; }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Jesús S. Delgado-Quijano</h1>
+        <div class="subtitle">IT Specialist & Web Developer</div>
+        <div class="contact">
+            Madrid, Torrejón de Ardoz | 614 354 710 | delgadosteeven@outlook.com<br>
+            linkedin.com/in/steeven-delgado-quijano-3778b71b9
+        </div>
+    </header>
+
+    <button class="accordion">Perfil Profesional</button>
+    <div class="panel">
+        <div class="panel-content">
+            Detail-oriented IT Specialist with extensive experience in technical support, network administration, and system maintenance. Proficient in database management (SQL, Oracle) and troubleshooting complex IT architectures. Adept at driving operational continuity, strengthening cybersecurity, and optimizing workflows through automation (VB.NET, PowerShell).
+        </div>
+    </div>
+
+    <button class="accordion">Experiencia Laboral</button>
+    <div class="panel">
+        <div class="panel-content">
+            <div class="job-title">IT SPECIALIST | ARVATO</div>
+            <div class="job-date">Oct 2025 - Present | Alcalá De Henares</div>
+            <ul>
+                <li>Diagnosed and resolved hardware/software issues for warehouse IT equipment.</li>
+                <li>Managed the IT asset lifecycle (procurement, deployment, follow-up).</li>
+                <li>Administered and configured Microsoft 365 and Dynamics environments.</li>
+            </ul>
+            <br>
+            <div class="job-title">WEB DEVELOPER | SERVIDET SOLUCIONES AVANZADAS S.L</div>
+            <div class="job-date">Jan 2026 - Apr 2026 | Madrid</div>
+            <ul>
+                <li>Administered SQL Server: managed querying and exploitation of relational databases.</li>
+                <li>Engineered internal applications using VB.NET, driving process automation.</li>
+                <li>Integrated data between systems using JSON.</li>
+            </ul>
+        </div>
+    </div>
+
+    <button class="accordion">Educación</button>
+    <div class="panel">
+        <div class="panel-content">
+            <div class="job-title">Technician in Web Application Development</div>
+            <div class="job-date">UNIVERSAE | 2024-2026</div>
+            <br>
+            <div class="job-title">Technician in Microcomputer Systems and Networks</div>
+            <div class="job-date">UNIVERSAE | 2022-2024</div>
+        </div>
+    </div>
+
+    <button class="accordion">Habilidades Técnicas</button>
+    <div class="panel">
+        <div class="panel-content skills-grid">
+            <div>
+                <strong>Sistemas & Redes:</strong><br>
+                Windows, macOS/iOS, Linux, Active Directory, VMware
+            </div>
+            <div>
+                <strong>Programación:</strong><br>
+                .NET, JavaScript, Java, HTML5, JSON, PowerShell
+            </div>
+            <div>
+                <strong>Bases de Datos & ERP:</strong><br>
+                SQL, Oracle, SAP Ariba, Dynamics 365, Power BI
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Script para controlar el movimiento y despliegue del acordeón
+        var acc = document.getElementsByClassName("accordion");
+        
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                // Alternar la clase activa para cambiar colores y el icono
+                this.classList.toggle("active");
+                
+                // Controlar el panel asociado
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null; // Cierra el panel
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px"; // Abre el panel dinámicamente
+                } 
+            });
+        }
+    </script>
+</body>
+</html>
